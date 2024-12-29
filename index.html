@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase - Your One-Stop Online Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <header class="bg-black text-white py-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">ShopEase</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#" class="hover:underline">Home</a></li>
+          <li><a href="#" class="hover:underline">Shop</a></li>
+          <li><a href="#" class="hover:underline">About</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="bg-black py-16">
+    <div class="container mx-auto flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 text-center md:text-left">
+        <h2 class="text-4xl font-bold text-white mb-4">Discover the Best Deals</h2>
+        <p class="text-gray-400 text-lg mb-6">ShopEase offers a wide variety of products at unbeatable prices. Shop now and save big!</p>
+        <button class="bg-white text-black py-3 px-6 rounded shadow hover:bg-gray-600 transition">Start Shopping</button>
+      </div>
+      <div class="md:w-1/2">
+        <div class="relative w-full overflow-hidden rounded shadow">
+          <div class="carousel flex transition-transform duration-700">
+            <img src="images/img1.jpg" alt="Shopping Image 1" class="w-full">
+            <img src="images/img2.png" alt="Shopping Image 2" class="w-full">
+            <img src="images/img3.png" alt="Shopping Image 3" class="w-full">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-900">
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-bold text-center text-white mb-8">Featured Products</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gray-800 p-6 rounded shadow hover:shadow-lg transition h-full flex flex-col">
+          <img src="images/img2.png" alt="Product 1" class="mb-4 rounded">
+          <h4 class="text-xl font-semibold text-white mb-2">
+            Samsung 138 cm (55 Inch) 4K Ultra HD Smart TV (UA55DU7660KLXL, Black)
+          </h4>
+          <p class="text-gray-400 mb-4 flex-grow">₹52,537.00</p>
+          <button class="bg-white text-black py-2 px-4 rounded shadow hover:bg-gray-600 transition">Add to Cart</button>
+        </div>
+        <div class="bg-gray-800 p-6 rounded shadow hover:shadow-lg transition h-full flex flex-col">
+          <img src="images/img3.png" alt="Product 2" class="mb-4 rounded">
+          <h4 class="text-xl font-semibold text-white mb-2">
+            Apple iPhone 16 Plus (Ultramarine, 128 GB)
+          </h4>
+          <p class="text-gray-400 mb-4 flex-grow">₹89,999</p>
+          <button class="bg-white text-black py-2 px-4 rounded shadow hover:bg-gray-600 transition">Add to Cart</button>
+        </div>
+        <div class="bg-gray-800 p-6 rounded shadow hover:shadow-lg transition h-full flex flex-col">
+          <img src="images/img5.webp" alt="Product 3" class="mb-4 rounded">
+          <h4 class="text-xl font-semibold text-white mb-2">
+            Realme Buds T110 TWS Earbuds with AI Noise Cancellation (IPX5 Water Resistant, 38 Hours Playback,Black)
+          </h4>
+          <p class="text-gray-400 mb-4 flex-grow">₹1,299</p>
+          <button class="bg-white text-black py-2 px-4 rounded shadow hover:bg-gray-600 transition">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black text-white py-6">
+    <div class="container mx-auto text-center">
+      <p class="text-sm">&copy; 2024 CanvilJoyalLobo. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const carousel = document.querySelector('.carousel');
+    let index = 0;
+    setInterval(() => {
+      index = (index + 1) % 3;
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000);
+  </script>
+</body>
+</html>
